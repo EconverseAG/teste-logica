@@ -1,0 +1,13 @@
+{
+  "name": "teste-econverse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:EconverseAG/teste-logica.git",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
