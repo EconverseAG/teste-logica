@@ -14,5 +14,25 @@ const products = [
 ]
 
 module.exports = () => {
-	// Seu código vai aqui!
-}
+  const transformProductStructure = (variants) => {
+    const productStructure = {};
+
+    variants.forEach((variant) => {
+      const [color, size] = variant.split('-');
+
+      if (!productStructure[color]) {
+        productStructure[color] = {};
+      }
+
+      if (!productStructure[color][size]) {
+        productStructure[color][size] = 1;
+      } else {
+        productStructure[color][size]++;
+      }
+    });
+
+    return productStructure;
+  }
+
+  return transformProductStructure(products);
+};
